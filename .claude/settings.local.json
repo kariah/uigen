@@ -3,9 +3,12 @@
     "allow": [
       "Bash(npm audit:*)",
       "Bash(npm outdated:*)",
-      "Bash(node -e \"const p=require\\(''./package.json''\\); const deps={...p.dependencies,...p.devDependencies}; Object.entries\\(deps\\).forEach\\(\\([k,v]\\)=>console.log\\(k,v\\)\\)\")"
+      "Bash(node -e \"const p=require\\(''./package.json''\\); const deps={...p.dependencies,...p.devDependencies}; Object.entries\\(deps\\).forEach\\(\\([k,v]\\)=>console.log\\(k,v\\)\\)\")",
+      "Skill(claude-api)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
-  }, 
+  },
   "hooks": {
     "PreToolUse": [
       {
