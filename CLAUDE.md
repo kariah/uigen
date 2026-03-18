@@ -82,6 +82,13 @@ JWT (HS256, 7-day expiry) stored in httpOnly cookies. Middleware at `src/middlew
 
 - `@/*` → `./src/*`
 
+## Hooks (Automated on Edit)
+
+Configured in `.claude/settings.local.json`. These run automatically — no action needed:
+
+- **Prettier** — runs after every `Write`/`Edit` to auto-format the saved file.
+- **TypeScript check** (`hooks/tsc.js`) — runs after every `Write`/`Edit` to a `.ts`/`.tsx` file. Exits with code 2 (blocking) if there are type errors; fix them before proceeding.
+
 ## Testing
 
 Vitest with jsdom environment. Test files are co-located with source in `__tests__/` subdirectories.
